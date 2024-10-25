@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Check if the user has already been redirected
+        if (!sessionStorage.getItem('hasRedirected')) {
+            // Set the flag in sessionStorage
+            sessionStorage.setItem('hasRedirected', 'true');
+            // Redirect to index.html
+            window.location.href = "index.html";
+        }
+    </script>
+    <meta property="og:title" content="Los Angeles Roleplay" /> <!-- Title of your website -->
+    <meta property="og:description" content="Los Angeles Roleplay offers a dynamic and engaging roleplaying experience set in a detailed and enjoyable environment. Join the server and make several new friends!" /> <!-- Short description -->
+    <meta property="og:image" content="https://replit.com/@galaxyrblx2345/LARP-website#ICON.png" /> <!-- URL of the image -->
+    <meta property="og:url" content="https://www.losangelesroleplay.com" /> <!-- URL of your website -->
+    <link rel="icon" href="ICON.ico" type="image/x-icon">
+    <title>Los Angeles Roleplay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS for smooth scrolling */
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling for the whole document */
+        }
+
+        /* Optional: To add some style for sections during scrolling */
+        .info-section {
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #ccc; /* Optional: Add a border to visually separate sections */
+            border-radius: 8px; /* Optional: Rounded corners for sections */
+            transition: background-color 0.5s; /* Smooth transition for background color */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-brand">Los Angeles Roleplay</div>
+        <div class="menu-container">
+            <div class="menu-icon" onclick="toggleMenu(this)">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </div>
+            <div class="dropdown">
+                <a href="index.html" class="option">Home</a>
+                <a href="playercount.html" class="option">Players In Game</a>
+            </div>
+        </div>
+    </nav>
+    <script>
+        function toggleMenu(icon) {
+            icon.classList.toggle('open');
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.classList.toggle('show');
+        }
+    </script>
+
+
+    <div class="container">
+        <header>
+            <img src="ICON.png" alt="Los Angeles Roleplay Logo" class="logo">
+            <h1 id="greeting">Los Angeles Roleplay</h1>
+        </header>
+        <main>
+            <p>Join our immersive roleplaying community in the beautiful world of Los Angeles. Experience ER:LC like never before!</p>
+            <h6>Discord server link at the bottom in the Ownership section!</h6>
+            <div class="button-group">
+                <button class="join-button" onclick="window.open('https://policeroleplay.community/join/lAsRp', '_blank')">Join the Game</button>
+                <button class="info-button" onclick="scrollToSection('about')">About Us</button>
+                <button class="rules-button" onclick="scrollToSection('rules')">Rules</button>
+                <button class="shop-button" onclick="scrollToSection('shop')">Shop</button>
+            </div>
+        </main>
+        <section id="about" class="info-section">
+            <h2>About Los Angeles Roleplay</h2>
+            <p>Los Angeles Roleplay offers a dynamic and engaging roleplaying experience set in a detailed and enjoyable environment. Join the server and make several new friends!</p>
+        </section>
+        <section id="rules" class="info-section">
+            <h2>Server Rules</h2>
+            <ul>
+                <li>No spamming or advertising.</li>
+                <li>Respect all players and staff.</li>
+                <li>No exploiting or cheating.</li>
+                <li>And even more. Join the Discord server using the button in the Ownership section to read all of the rules and ensure you don't get in trouble!</li>
+            </ul>
+        </section>
+        <section id="ownership" class="info-section">
+            <h2>Server Ownership</h2>
+            <div class="ownership-list" id="ownershipList">
+                <div class="owner">
+                    <img src="plex.webp" alt="azanyeetcallum" class="avatar">
+                    <p>azanyeetcallum - <strong>Founder</strong></p>
+                </div>
+                <div class="owner">
+                    <img src="oreo.webp" alt="oreo_crum" class="avatar">
+                    <p>oreo_crum - <strong>Co-Founder</strong></p>
+                </div>
+                <div class="owner">
+                    <img src="amelia.webp" alt="Shadows02833/Amelia" class="avatar">
+                    <p>Shadows02833/Amelia - <strong>Deputy Founder</strong></p>
+                </div>
+                <div class="owner">
+                    <img src="galaxy.webp" alt="galaxyrblx2345" class="avatar">
+                    <p>galaxyrblx2345 - <strong>Assistant Founder</strong></p>
+                </div>
+            </div>
+            <p>This server is owned and managed by a dedicated team committed to providing a high-quality roleplaying experience. Our staff is here to help you enjoy your time in Los Angeles Roleplay.</p>
+            <button class="discord-button" onclick="window.open('https://discord.gg/pYybFRSDJG', '_blank')">Join Our Discord</button>
+        </section>
+    </div>
+    <section id="shop" class="info-section">
+        <h2>LARP Shop</h2>
+        <h1>Coming Soon!</h1>
+    </section>
+    <script src="script.js"></script>
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+            highlightSection(section);
+        }
+
+        function highlightSection(section) {
+            section.style.transition = 'background-color 0.3s'; // Shorter highlight duration
+            section.style.backgroundColor = '#ffeb3b'; // Highlight color (yellow)
+            setTimeout(() => {
+                section.style.backgroundColor = ''; // Remove highlight
+            }, 1000); // Highlight lasts for 1 second
+        }
+    </script>
+</body>
+</html>

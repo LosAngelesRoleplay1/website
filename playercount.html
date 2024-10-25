@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players In Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Los Angeles Roleplay</div>
+        <div class="menu-container">
+            <div class="menu-icon" onclick="toggleMenu(this)">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </div>
+            <div class="dropdown">
+                <a href="index.html" class="option">Home</a>
+            </div>
+        </div>
+    </nav>
+    <script>
+        function toggleMenu(icon) {
+            icon.classList.toggle('open');
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.classList.toggle('show');
+        }
+    </script>
+
+    <div class="container">
+        <h1>Players In Game</h1>
+        <div id="player-counter" class="player-count">
+            <h2>Loading player count...</h2>
+        </div>
+    </div>
+
+    <script src="playercount.js"></script>
+</body>
+</html>
