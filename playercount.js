@@ -1,9 +1,9 @@
-const apiKey = 'ZDkplVCqsj-HImkcBkwvbMibsPidwIhycLOFhNnvEJTLJjASbGM';  // Replace with actual API key
-const apiUrl = 'https://api.policeroleplay.community/v1';  // Replace with actual API URL
+const apiKey = 'ZDkplVCqsj-HImkcBkwvbMibsPidwIhycLOFhNnvEJTLJjASbGM';  
+const apiUrl = 'https://api.policeroleplay.community/v1';  
 
 async function fetchPlayerCount() {
     try {
-        const response = await fetch(`${apiUrl}/server/players`, {  // Use backticks for template literals
+        const response = await fetch(`${apiUrl}/server/players`, {  
             method: 'GET',
             headers: {
                 'Server-Key': apiKey,
@@ -17,7 +17,7 @@ async function fetchPlayerCount() {
             throw new Error('Failed to fetch player count.');
         }
     } catch (error) {
-        document.getElementById('player-counter').innerHTML = `<h2>Error: ${error.message}</h2>`; // Use backticks for template literals
+        document.getElementById('player-counter').innerHTML = `<h2>Error: ${error.message}</h2>`; 
     }
 }
 
@@ -26,7 +26,7 @@ function updatePlayerCounter(players) {
 
     if (players.length > 0) {
         const playerList = players.map(player => 
-            `<p>${player.Player} (${player.Permission}) - ${player.Team}</p>` // Correct use of template literals
+            `<p>${player.Player} (${player.Permission}) - ${player.Team}</p>` 
         ).join('');
         playerCounter.innerHTML = `<h2>Current Players</h2>${playerList}`;
     } else {
@@ -34,6 +34,6 @@ function updatePlayerCounter(players) {
     }
 }
 
-// Fetch the player count every 30 seconds
+
 setInterval(fetchPlayerCount, 30000);
 fetchPlayerCount();
