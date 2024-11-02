@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #281414;
+  background-color: #000000;
   margin: 0;
   padding: 0;
   color: #ffffff;
@@ -12,7 +12,7 @@ html {
 
 /* Orange Navigation Bar */
 .navbar {
-  background-color: #3a1414;
+  background-color: #333333;
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -90,7 +90,7 @@ html {
 .option {
   padding: 15px;
   text-align: center;
-  background-color: #474747;
+  background-color: #b51a00;
   color: white;
   border-bottom: 1px solid #ddd;
   cursor: pointer;
@@ -100,7 +100,7 @@ html {
 }
 
 .option:hover {
-  background-color: #333333;
+  background-color: #e22400;
 }
 
 .option:active {
@@ -113,7 +113,7 @@ html {
   left: 30%;
   font-size: 24px;
   color: #ffffff;
-  background-color: #611d00;
+  background-color: #b51a00;
   padding: 15px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -158,9 +158,9 @@ main p {
   gap: 20px;
 }
 
-.join-button, .info-button, .rules-button, .discord-button, .shop-button {
+.join-button, .info-button, .rules-button, .discord-button, .shop-button, .shop-channel {
   display: inline-block;
-  background-color: #474747;
+  background-color: #b51a00;
   color: #ffffff;
   padding: 15px 25px;
   font-size: 1.2em;
@@ -172,7 +172,7 @@ main p {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.join-button::after, .info-button::after, .rules-button::after, .discord-button::after, .shop-button::after {
+.join-button::after, .info-button::after, .rules-button::after, .discord-button::after, .shop-button::after, .shop-channel::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -186,18 +186,18 @@ main p {
   transform: translate(-50%, -50%) scale(0);
 }
 
-.join-button:hover::after, .info-button:hover::after, .rules-button:hover::after, .discord-button:hover::after, .shop-button:hover::after {
+.join-button:hover::after, .info-button:hover::after, .rules-button:hover::after, .discord-button:hover::after, .shop-button:hover::after, shop-channel:hover::after {
   width: 400%;
   height: 400%;
   transform: translate(-50%, -50%) scale(1);
 }
 
-.join-button:hover, .info-button:hover, .rules-button:hover, .discord-button:hover, .shop-button:hover {
-  background-color: #333333;
+.join-button:hover, .info-button:hover, .rules-button:hover, .discord-button:hover, .shop-button:hover, shop-channel:hover {
+  background-color: #e22400;
   transform: translateY(-3px);
 }
 
-.join-button:focus, .info-button:focus, .rules-button:focus, .discord-button:focus, .shop-button:focus {
+.join-button:focus, .info-button:focus, .rules-button:focus, .discord-button:focus, .shop-button:focus, shop-channel:focus {
   outline: none;
 }
 
@@ -205,14 +205,14 @@ main p {
 .info-section {
   margin-top: 40px;
   padding: 20px;
-  background-color: #5c5c5c;
+  background-color: #831100;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: background-color 0.5s ease;
 }
 
 .info-section.highlight {
-  background-color: rgba(255, 215, 0, 0.5);
+  background-color: rgb(226, 36, 0, 0.5);
 }
 
 .info-section h2 {
@@ -292,6 +292,10 @@ main p {
     flex-direction: column;
   }
 
+#shop {
+  text-align: center;
+}
+  
   .avatar {
     width: 100px;
     height: 100px;
