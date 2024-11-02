@@ -119,6 +119,17 @@ html {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.server_rules {
+  top: 30%;
+  left: 30%;
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #b51a00;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* Container and other sections */
 .container {
   max-width: 900px;
@@ -170,6 +181,7 @@ main p {
   position: relative;
   overflow: hidden;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
 }
 
 .join-button::after, .info-button::after, .rules-button::after, .discord-button::after, .shop-button::after, .shop-channel::after {

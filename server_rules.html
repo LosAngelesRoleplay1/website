@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Server Rules</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-brand">Los Angeles Roleplay</div>
+            <div class="menu-container">
+                <div class="menu-icon" onclick="toggleMenu(this)">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div>
+                <div class="dropdown">
+                    <a href="index.html" class="option">Home</a>
+                    <a href="playercount.html" class="option">Players In Game</a>
+                    <a href="server_rules.html" class="option">Server Rules</a>
+                    <a class="option" onclick="window.open('https://discord.gg/z43Yg47M9N', '_blank')">Discord Server</a>
+                </div>
+            </div>
+        </nav>
+        <script>
+            function toggleMenu(icon) {
+                icon.classList.toggle('open');
+                const dropdown = document.querySelector('.dropdown');
+                dropdown.classList.toggle('show');
+            }
+        </script>
+        <div class="container">
+            <h1>Server Rules</h1>
+            <div id="server_rules" class="info-section">
+            <ul>
+                <li>No spamming or advertising.</li>
+                <li>Respect all players and staff.</li>
+                <li>No exploiting or cheating.</li>
+                <h3>And more! Join the Discord server using the button in the Dropdown Menu to read the full list of rules!</h3>
+            </ul>
+        </div>
+    </div>
+</body>
