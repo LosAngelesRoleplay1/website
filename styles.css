@@ -249,6 +249,17 @@ main p {
   margin: 20px 0;
 }
 
+.shop-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+#shop {
+  text-align: center;
+}
+
 .owner {
   text-align: center;
   margin: 15px;
@@ -291,7 +302,7 @@ main p {
     gap: 10px;
   }
 
-  .join-button, .info-button, .rules-button, .discord-button, .shop-button {
+  .join-button, .info-button, .rules-button, .discord-button, .shop-button, .shop-channel {
     padding: 10px 15px;
     font-size: 1em;
   }
@@ -303,13 +314,10 @@ main p {
   .ownership-list {
     flex-direction: column;
   }
-
-#shop {
-  text-align: center;
-}
   
   .avatar {
     width: 100px;
     height: 100px;
   }
+  
 }
